@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|c:\\users\\segovia\\downloads\\project-management\\projectmanagement\\projectmanagement.api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|solutionrelative:projectmanagement.api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|c:\\users\\segovia\\downloads\\project-management\\projectmanagement\\projectmanagement.api\\services\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|solutionrelative:projectmanagement.api\\services\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|c:\\users\\segovia\\downloads\\project-management\\projectmanagement\\projectmanagement.api\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|solutionrelative:projectmanagement.api\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|c:\\users\\segovia\\downloads\\project-management\\projectmanagement\\projectmanagement.api\\data\\projectmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|solutionrelative:projectmanagement.api\\data\\projectmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27F6C640-0EBE-43F3-BBC8-42EFB4B00A68}|ProjectManagement.Tests\\ProjectManagement.Tests.csproj|c:\\users\\segovia\\downloads\\project-management\\projectmanagement\\projectmanagement.tests\\projectscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27F6C640-0EBE-43F3-BBC8-42EFB4B00A68}|ProjectManagement.Tests\\ProjectManagement.Tests.csproj|solutionrelative:projectmanagement.tests\\projectscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|c:\\users\\segovia\\downloads\\project-management\\projectmanagement\\projectmanagement.api\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|solutionrelative:projectmanagement.api\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|c:\\users\\segovia\\downloads\\project-management\\projectmanagement\\projectmanagement.api\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|solutionrelative:projectmanagement.api\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|c:\\users\\segovia\\downloads\\project-management\\projectmanagement\\projectmanagement.api\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C88F1C0F-A0D5-4235-A376-99FF625D752E}|ProjectManagement.Api\\ProjectManagement.Api.csproj|solutionrelative:projectmanagement.api\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "ProjectManagement.Api\\Services\\TaskService.cs",
+              "ToolTip": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Services\\TaskService.cs",
+              "RelativeToolTip": "ProjectManagement.Api\\Services\\TaskService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACwAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T19:35:20.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Services\\IProjectService.cs",
+              "RelativeDocumentMoniker": "ProjectManagement.Api\\Services\\IProjectService.cs",
+              "ToolTip": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Services\\IProjectService.cs",
+              "RelativeToolTip": "ProjectManagement.Api\\Services\\IProjectService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADgvxQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T19:18:26.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "ProjectManagement.Api\\Controllers\\ProjectsController.cs",
+              "ToolTip": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "ProjectManagement.Api\\Controllers\\ProjectsController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA9wDAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T19:17:59.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "ProjectManagement.Api\\Controllers\\TasksController.cs",
+              "ToolTip": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "ProjectManagement.Api\\Controllers\\TasksController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwEkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T19:17:48.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectManagementContext.cs",
+              "DocumentMoniker": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Data\\ProjectManagementContext.cs",
+              "RelativeDocumentMoniker": "ProjectManagement.Api\\Data\\ProjectManagementContext.cs",
+              "ToolTip": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Data\\ProjectManagementContext.cs",
+              "RelativeToolTip": "ProjectManagement.Api\\Data\\ProjectManagementContext.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T19:13:27.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "ProjectManagement.Api\\Profiles\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Profiles\\MappingProfile.cs",
+              "RelativeToolTip": "ProjectManagement.Api\\Profiles\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T11:13:50.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectsControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Tests\\ProjectsControllerTests.cs",
+              "RelativeDocumentMoniker": "ProjectManagement.Tests\\ProjectsControllerTests.cs",
+              "ToolTip": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Tests\\ProjectsControllerTests.cs",
+              "RelativeToolTip": "ProjectManagement.Tests\\ProjectsControllerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T17:29:07.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Services\\ProjectService.cs",
+              "RelativeDocumentMoniker": "ProjectManagement.Api\\Services\\ProjectService.cs",
+              "ToolTip": "C:\\Users\\segovia\\Downloads\\project-management\\ProjectManagement\\ProjectManagement.Api\\Services\\ProjectService.cs",
+              "RelativeToolTip": "ProjectManagement.Api\\Services\\ProjectService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T17:22:25.037Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

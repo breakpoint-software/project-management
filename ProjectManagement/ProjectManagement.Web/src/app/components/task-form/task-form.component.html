@@ -1,0 +1,99 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h3>{{ isEditMode ? 'Edit Task' : 'New Task' }}</h3>
+        </div>
+        <div class="card-body">
+          <div *ngIf="loading" class="text-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+
+          <div *ngIf="error" class="alert alert-danger" role="alert">
+            {{ error }}
+          </div>
+
+          <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" *ngIf="!loading">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                formControlName="title"
+                [class.is-invalid]="title?.invalid && title?.touched">
+              <div class="invalid-feedback" *ngIf="title?.invalid && title?.touched">
+                <div *ngIf="title?.errors?.['required']">Title is required</div>
+                <div *ngIf="title?.errors?.['minlength']">Title must be at least 3 characters</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="description" class="form-label">Description *</label>
+              <textarea
+                class="form-control"
+                id="description"
+                rows="3"
+                formControlName="description"
+                [class.is-invalid]="description?.invalid && description?.touched">
+              </textarea>
+              <div class="invalid-feedback" *ngIf="description?.invalid && description?.touched">
+                Description is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="status" class="form-label">Status *</label>
+              <select
+                class="form-select"
+                id="status"
+                formControlName="status"
+                [class.is-invalid]="status?.invalid && status?.touched">
+                <option *ngFor="let s of statuses" [value]="s">{{ s }}</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="projectId" class="form-label">Project ID *</label>
+              <input
+                type="number"
+                class="form-control"
+                id="projectId"
+                formControlName="projectId"
+                [class.is-invalid]="projectId?.invalid && projectId?.touched">
+              <div class="invalid-feedback" *ngIf="projectId?.invalid && projectId?.touched">
+                <div *ngIf="projectId?.errors?.['required']">Project ID is required</div>
+                <div *ngIf="projectId?.errors?.['min']">Project ID must be greater than 0</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="dueDate" class="form-label">Due Date *</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dueDate"
+                formControlName="dueDate"
+                [class.is-invalid]="dueDate?.invalid && dueDate?.touched">
+              <div class="invalid-feedback" *ngIf="dueDate?.invalid && dueDate?.touched">
+                Due date is required
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2">
+              <button type="button" class="btn btn-secondary" (click)="cancel()">
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-primary" [disabled]="loading">
+                {{ isEditMode ? 'Update' : 'Create' }} Task
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
