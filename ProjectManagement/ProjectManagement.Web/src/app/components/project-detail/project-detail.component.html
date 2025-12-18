@@ -56,7 +56,7 @@
             <td>{{ task.description }}</td>
             <td>
               <span [ngClass]="getStatusClass(task.status)">
-                {{ task.status }}
+                {{ statuses[task.status] }}
               </span>
             </td>
             <td>{{ task.dueDate | date }}</td>

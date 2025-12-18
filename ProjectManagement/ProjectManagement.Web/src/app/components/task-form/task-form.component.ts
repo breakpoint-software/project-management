@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { TaskService } from '../../services/task.service';
-import { ProjectTask } from '../../models/project-task.model';
+import { ProjectTask, ProjectTaskStatus, ProjectTaskStatusMapping } from '../../models/project-task.model';
 
 @Component({
   selector: 'app-task-form',
@@ -20,7 +20,9 @@ export class TaskFormComponent implements OnInit, OnDestroy {
   error: string | null = null;
   private destroy$ = new Subject<void>();
 
-  statuses = ['Todo', 'InProgress', 'Done'];
+  statuses = ProjectTaskStatus;
+
+  statusOptions =  Object.keys(ProjectTaskStatus).filter(e => !isNaN(Number(e))).map(key => Number(key));
 
   constructor(
     private fb: FormBuilder,
@@ -31,7 +33,7 @@ export class TaskFormComponent implements OnInit, OnDestroy {
     this.taskForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(3)]],
       description: ['', Validators.required],
-      status: ['Todo', Validators.required],
+      status: [ProjectTaskStatus.Todo, Validators.required],
       projectId: [0, [Validators.required, Validators.min(1)]],
       dueDate: ['', Validators.required]
     });
@@ -62,7 +64,7 @@ export class TaskFormComponent implements OnInit, OnDestroy {
     this.taskService.getTaskById(id)
       .pipe(takeUntil(this.destroy$))
       .subscribe({
-        next: (task) => {
+        next: (task: ProjectTask) => {
           this.taskForm.patchValue({
             title: task.title,
             description: task.description,
@@ -88,7 +90,8 @@ export class TaskFormComponent implements OnInit, OnDestroy {
       const taskData: ProjectTask = {
         id: this.taskId || 0,
         ...this.taskForm.value,
-        dueDate: new Date(this.taskForm.value.dueDate)
+        dueDate: new Date(this.taskForm.value.dueDate),
+        status: Number(this.taskForm.value.status)
       };
 
       const operation = this.isEditMode

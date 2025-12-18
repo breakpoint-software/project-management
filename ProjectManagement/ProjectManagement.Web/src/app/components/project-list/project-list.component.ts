@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/project.model';
+import ProjectService from '../../services/project.service';
 
 @Component({
   selector: 'app-project-list',
@@ -28,11 +28,11 @@ export class ProjectListComponent implements OnInit {
     this.error = null;
 
     this.projectService.getProjects().subscribe({
-      next: (projects) => {
+      next: (projects: Project[]) => {
         this.projects = projects;
         this.loading = false;
       },
-      error: (error) => {
+      error: (error: any) => {
         this.error = 'Failed to load projects';
         this.loading = false;
         console.error('Error loading projects:', error);
@@ -50,7 +50,7 @@ export class ProjectListComponent implements OnInit {
         next: () => {
           this.loadProjects();
         },
-        error: (error) => {
+        error: (error: any) => {
           this.error = 'Failed to delete project';
           console.error('Error deleting project:', error);
         }

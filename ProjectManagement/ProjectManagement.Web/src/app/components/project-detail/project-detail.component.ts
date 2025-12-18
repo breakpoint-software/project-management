@@ -2,10 +2,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { ProjectService } from '../../services/project.service';
 import { TaskService } from '../../services/task.service';
 import { Project } from '../../models/project.model';
-import { ProjectTask } from '../../models/project-task.model';
+import { ProjectTask, ProjectTaskStatus, ProjectTaskStatusMapping } from '../../models/project-task.model';
+import ProjectService from '../../services/project.service';
 
 @Component({
   selector: 'app-project-detail',
@@ -19,6 +19,7 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
   loading = false;
   error: string | null = null;
   private destroy$ = new Subject<void>();
+  statuses = ProjectTaskStatus;
 
   constructor(
     private route: ActivatedRoute,
@@ -47,11 +48,11 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
     this.projectService.getProjectById(id)
       .pipe(takeUntil(this.destroy$))
       .subscribe({
-        next: (project) => {
+        next: (project: Project) => {
           this.project = project;
           this.loading = false;
         },
-        error: (error) => {
+        error: (error: any) => {
           this.error = 'Failed to load project';
           this.loading = false;
           console.error('Error loading project:', error);

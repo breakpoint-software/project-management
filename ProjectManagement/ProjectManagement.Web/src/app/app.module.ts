@@ -9,7 +9,7 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { TaskFormComponent } from './components/task-form/task-form.component';
 
-import { ProjectService } from './services/project.service';
+import ProjectService from './services/project.service';
 import { TaskService } from './services/task.service';
 
 const routes: Routes = [
