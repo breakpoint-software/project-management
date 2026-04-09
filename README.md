@@ -21,7 +21,7 @@ The system follows a layered architecture, ensuring clear separation between pre
 
 - **Frontend:** Angular 20  
 - **Backend:** .NET 9.0 (ASP.NET Core)  
-- **Database:** (e.g. SQL Server / PostgreSQL)
+- **Database:** SQL Server 
 
 This structure improves maintainability, testability, and long-term scalability.
 
@@ -31,7 +31,7 @@ This structure improves maintainability, testability, and long-term scalability.
 
 - **Frontend:** Angular 20  
 - **Backend:** .NET 9.0 (ASP.NET Core)  
-- **Database:** (your database)  
+- **Database:** SQL Server
 - **Other tools:** REST APIs, Docker (optional)
 
 ---
