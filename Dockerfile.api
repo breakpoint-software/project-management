@@ -1,0 +1,45 @@
+# syntax=docker/dockerfile:1.7
+
+# -----------------------------
+# Build stage
+# -----------------------------
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+WORKDIR /src
+
+# Copiamos solución y csproj para cachear restore
+COPY ProjectManagement/ProjectManagement.sln ProjectManagement/
+COPY ProjectManagement/ProjectManagement.Api/ProjectManagement.Api.csproj ProjectManagement/ProjectManagement.Api/
+
+WORKDIR /src/ProjectManagement
+RUN dotnet restore "ProjectManagement.Api/ProjectManagement.Api.csproj"
+
+# Copiamos todo el código
+COPY ProjectManagement/. ./
+
+# Publicamos en Release
+RUN dotnet publish "ProjectManagement.Api/ProjectManagement.Api.csproj" \
+    -c Release \
+    -o /app/publish \
+    /p:UseAppHost=false
+
+# -----------------------------
+# Runtime stage
+# -----------------------------
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
+WORKDIR /app
+
+# Variables de entorno recomendadas
+ENV ASPNETCORE_URLS=http://+:8080 \
+    ASPNETCORE_HTTP_PORTS=8080 \
+    DOTNET_RUNNING_IN_CONTAINER=true \
+    ASPNETCORE_ENVIRONMENT=Production
+
+# Usuario no root (seguridad)
+USER app
+
+# Copiamos la app publicada
+COPY --from=build /app/publish ./
+
+EXPOSE 8080
+
+ENTRYPOINT ["dotnet", "ProjectManagement.Api.dll"]
