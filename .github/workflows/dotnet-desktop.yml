@@ -1,0 +1,33 @@
+name: .NET CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ProjectManagement
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore solution
+        run: dotnet restore ProjectManagement.sln
+
+      - name: Build solution
+        run: dotnet build ProjectManagement.sln --configuration Release --no-restore
+
+      - name: Run tests
+        run: dotnet test ProjectManagement.sln --configuration Release --no-build --verbosity normal
