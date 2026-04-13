@@ -39,17 +39,17 @@ namespace ProjectManagement.Api.Services
 
         public async Task<IEnumerable<ProjectTaskDto>> GetAllAsync()
         {
-            return  _context.Projects.Include(p => p.Tasks).ProjectTo<ProjectTaskDto>(_mapper.ConfigurationProvider);
+            return  _context.Tasks.ProjectTo<ProjectTaskDto>(_mapper.ConfigurationProvider);
         }
 
-        public async Task<IEnumerable<ProjectTaskDto>> GetAllByProjectAsync(int projectId )
+        public async Task<IEnumerable<ProjectTaskDto>> GetAllByProjectAsync(int projectId)
         {
             return await _context.Tasks.Where(t => t.ProjectId == projectId).ProjectTo<ProjectTaskDto>(_mapper.ConfigurationProvider).ToListAsync();
         }
 
         public async Task<ProjectTaskDto> GetByIdAsync(int id)
         {
-            return _mapper.Map<ProjectTaskDto>(await _context.Projects.Include(p => p.Tasks).FirstOrDefaultAsync(p => p.Id == id));
+            return _mapper.Map<ProjectTaskDto>(await _context.Tasks.Where(e => e.Id == id).FirstOrDefaultAsync());
 
         }
 

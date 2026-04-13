@@ -18,18 +18,17 @@ public class TasksController : ControllerBase
         _service = service;
     }
 
-    // GET: api/tasks
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<ProjectTaskDto>>> GetTasks()
+    public async Task<ActionResult<IEnumerable<ProjectTaskDto>>> GetTasks([FromQuery] int? projectId)
     {
-        return Ok(await _service.GetAllAsync());
-    }
+        if (projectId.HasValue)
+        {
+            var tasks = await _service.GetAllByProjectAsync(projectId.Value);
+            return Ok(tasks);
+        }
 
-    // GET: api/tasks/project/5
-    [HttpGet("project/{projectId}")]
-    public async Task<ActionResult<IEnumerable<ProjectTask>>> GetTasksByProject(int projectId)
-    {
-        return Ok(await _service.GetAllByProjectAsync(projectId));
+        var allTasks = await _service.GetAllAsync();
+        return Ok(allTasks);
     }
 
     // GET: api/tasks/5

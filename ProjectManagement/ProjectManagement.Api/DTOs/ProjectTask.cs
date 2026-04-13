@@ -8,5 +8,4 @@ public class ProjectTaskDto
     public TaskStatus Status { get; set; }
     public int ProjectId { get; set; }
     public DateTime? DueDate { get; set; }
-    public ProjectDto? Project { get; set; }
 }
