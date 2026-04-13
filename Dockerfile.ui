@@ -1,0 +1,25 @@
+FROM node:20-alpine AS build
+
+WORKDIR /app
+
+COPY ProjectManagement/ProjectManagement.Web/package*.json ./
+RUN npm install
+
+COPY ProjectManagement/ProjectManagement.Web/ ./
+
+# Build real de producción
+RUN npx ng build --configuration production
+
+
+FROM node:20-alpine
+
+WORKDIR /app
+
+RUN npm install -g serve
+
+# Ajusta esta ruta si tu build genera otra carpeta
+COPY --from=build /app/dist /app/dist
+
+EXPOSE 4200
+
+CMD ["serve", "-s", "dist", "-l", "4200"]

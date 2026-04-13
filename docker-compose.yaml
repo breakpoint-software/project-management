@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: project-management-api
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    container_name: project-management-ui
+    ports:
+      - "4200:4200"
+    depends_on:
+      - api
+    restart: unless-stopped

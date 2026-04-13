@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ProjectTask } from '../models/project-task.model';
 import { BaseApiService } from './base.service';
-
+import { environment } from '../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +12,7 @@ export class TaskService extends BaseApiService {
   private apiUrl = '';
 
   constructor(protected override http: HttpClient) {
-    super(http, 'https://localhost:7143/api/tasks');
+    super(http, `${environment.apiUrl}/api/tasks`);
    }
 
   getTasks(): Observable<ProjectTask[]> {

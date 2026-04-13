@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Project } from '../models/project.model';
 import { BaseApiService } from './base.service';
+import { environment } from '../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ import { BaseApiService } from './base.service';
 export default class ProjectService extends BaseApiService {
 
   constructor(protected override http: HttpClient)   {
-    super(http, "https://localhost:7143/api/projects");
+    super(http, `${environment.apiUrl}/api/projects`);
    }
 
   getProjects() : Observable<Project[]> {
