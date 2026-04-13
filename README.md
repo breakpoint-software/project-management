@@ -44,3 +44,6 @@ git clone https://github.com/breakpoint-software/project-management.git
 
 # Navigate to the project
 cd project-management
+
+# Run project with docker compose
+docker-compose up --build
