@@ -30,7 +30,7 @@ This structure improves maintainability, testability, and long-term scalability.
 ## 🛠️ Tech Stack
 
 - **Frontend:** Angular 20  
-- **Backend:** .NET 9.0 (ASP.NET Core)  
+- **Backend:** .NET 10.0 (ASP.NET Core)  
 - **Database:** SQL Server
 - **Other tools:** REST APIs, Docker (optional)
 
