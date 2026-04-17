@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-management-api
+spec:
+  selector:
+    app: project-management-api
+  ports:
+  - port: 8080
+    targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-management-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: project-management-api
+  template:
+    metadata:
+      labels:
+        app: project-management-api
+    spec:
+      containers:
+      - name: project-management-api
+        image: breakpointsoftware/project-management-api
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+
+        ports:
+        - containerPort: 8080
+

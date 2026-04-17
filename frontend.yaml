@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-management
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: project-management
+  template:
+    metadata:
+      labels:
+        app: project-management
+    spec:
+      containers:
+      - name: project-management
+        image: breakpointsoftware/project-management-ui
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+
+        ports:
+        - containerPort: 4200
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-management
+spec:
+  type: NodePort
+  selector:
+    app: project-management
+  ports:
+  - port: 4200
+    targetPort: 4200

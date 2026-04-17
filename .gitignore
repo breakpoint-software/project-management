@@ -1,2 +1,7 @@
 **/bin/
 **/obj/
+/ProjectManagement/ProjectManagement.Api/obj
+/ProjectManagement/ProjectManagement.Api/bin
+.vs
+/ProjectManagement/ProjectManagement.Tests/obj
+/ProjectManagement/ProjectManagement.Tests/bin
